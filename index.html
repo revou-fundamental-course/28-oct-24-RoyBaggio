@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Roy</title>
+    <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\styles.css">
-    
 </head>
-
 <body>
-    
-</body>
 
+<div class="container">
+    <!-- INII BAGIAN FORMULIR INPUT -->
+    <div class="bmi-form" id="bmi-form">
+        <h1>Kalkulator BMI</h1>
+        <p>Berat badan ideal adalah impian semua orang... Yuk, hitung sekarang di kalkulator BMI.</p>
+
+        <label for="gender">Jenis Kelamin</label>
+        <input type="radio" id="male" name="gender" value="male" checked> Pria
+        <input type="radio" id="female" name="gender" value="female"> Wanita
+
+        <label for="weight">Berat Badan (kg)</label>
+        <input type="number" id="weight" placeholder="Masukkan berat badan">
+
+        <label for="age">Usia (tahun)</label>
+        <input type="number" id="age" placeholder="Masukkan usia">
+
+        <label for="height">Tinggi badan (cm)</label>
+        <input type="number" id="height" placeholder="Masukkan tinggi badan">
+
+        <button onclick="calculateBMI()">Hitung BMI</button>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+<!-- INII BAGIAN FORMULIR INPUT SELESAIII -->
+
+
+    <!--INI BAGIAN HASIL -->
+    <div class="bmi-result" id="result">
+        <h2>Hasil BMI Anda</h2>
+        <p id="bmi-value">BMI Anda: <span id="bmi-result">0</span></p>
+        <p id="bmi-status"></p>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+</div>
+
+<!--INI BAGIAN HASIL SELESAI -->
+
+<script src="js\script.js"></script>
+</body>
 </html>

@@ -1,1 +1,84 @@
 /* Ini css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Hide result initially */
+.bmi-result {
+  display: none;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: cyan;
+}
+
+button:nth-child(1) {
+  background-color: #357e38;
+}
+
+button:nth-child(2) {
+  background-color: #f44336;
+}
+
+/* Style for result button */
+.bmi-result button {
+  background-color: #4CAF50;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/* Full screen result display */
+.show-result .bmi-form {
+  display: none;
+}
+
+.show-result .bmi-result {
+  display: block;
+}
