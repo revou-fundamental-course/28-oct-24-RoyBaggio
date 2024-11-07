@@ -6,20 +6,23 @@
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
-<body>
+<body style="background-color: bisque;">
 
 <div class="container">
-    <!-- INII BAGIAN FORMULIR INPUT -->
+    <!-- Input Form Section -->
     <div class="bmi-form" id="bmi-form">
         <h1>Kalkulator BMI</h1>
-        <p>Berat badan ideal adalah impian semua orang... Yuk, hitung sekarang di kalkulator BMI.</p>
+        <p style="font-family: 'Times New Roman', Times, serif;">Kalkulator BMI kami adalah alat sederhana dan efektif untuk membantu Anda memahami apakah berat badan Anda berada dalam rentang yang sehat.
+             BMI, atau Indeks Massa Tubuh, adalah ukuran yang menggabungkan berat dan tinggi badan untuk menentukan kategori berat badan yang ideal.
+              Dengan menggunakan kalkulator ini, Anda dapat mengetahui apakah Anda berada di bawah berat badan, memiliki berat badan normal, kelebihan berat badan, atau dalam kategori obesitas.
+               Hasil yang diberikan juga disertai dengan rekomendasi untuk mencapai atau mempertahankan berat badan ideal</p>
 
         <label for="gender">Jenis Kelamin</label>
         <input type="radio" id="male" name="gender" value="male" checked> Pria
         <input type="radio" id="female" name="gender" value="female"> Wanita
 
         <label for="weight">Berat Badan (kg)</label>
-        <input type="number" id="weight" placeholder="Masukkan berat badan">
+        <input type="number" id="weight" required placeholder="Masukkan berat badan">
 
         <label for="age">Usia (tahun)</label>
         <input type="number" id="age" placeholder="Masukkan usia">
@@ -27,23 +30,33 @@
         <label for="height">Tinggi badan (cm)</label>
         <input type="number" id="height" placeholder="Masukkan tinggi badan">
 
-        <button onclick="calculateBMI()">Hitung BMI</button>
-        <button onclick="resetForm()">Reset</button>
+        <button id="hitungbutton" onclick="calculateBMI()" style="background-color: aqua;">Hitung BMI</button>
+        <button onclick="resetForm()" style="background-color: green;">Reset</button>
+
+        <!-- Untuk Informasi di bawah Form Section -->
+        <div class="info-section">
+            <h2>Fitur Utama </h2>
+            <ul>
+
+                <li>Mudah Digunakan: Hanya masukkan jenis kelamin, berat badan, tinggi badan, dan usia, lalu klik "Hitung BMI." </li>
+               <li>Hasil Instan: Menampilkan hasil BMI Anda dengan kategori berat badan dan deskripsi penjelasan sesuai dengan kategori tersebut.</li>   
+                <li>Rekomendasi Kesehatan: Dapatkan saran singkat tentang cara menjaga atau mengurangi berat badan berdasarkan hasil BMI Anda.</li> 
+                <li>Desain Responsif: Kalkulator ini didesain agar dapat digunakan pada berbagai perangkat, baik desktop, tablet, maupun ponsel.</li>
+                <li>Informasi Tambahan: Berisi tips dan informasi tentang kesehatan yang dapat membantu Anda dalam menjaga pola hidup sehat</li>
+            </ul>
+        </div>
     </div>
 
-<!-- INII BAGIAN FORMULIR INPUT SELESAIII -->
-
-
-    <!--INI BAGIAN HASIL -->
+    <!-- Hasil Section -->
     <div class="bmi-result" id="result">
         <h2>Hasil BMI Anda</h2>
         <p id="bmi-value">BMI Anda: <span id="bmi-result">0</span></p>
-        <p id="bmi-status"></p>
+        <p id="bmi-status" style="
+        background-color: goldenrod; "></p>
+        <p id="bmi-description"></p> <!-- Paragraph for BMI explanation -->
         <button onclick="goBack()">Kembali</button>
     </div>
 </div>
-
-<!--INI BAGIAN HASIL SELESAI -->
 
 <script src="js\script.js"></script>
 </body>
