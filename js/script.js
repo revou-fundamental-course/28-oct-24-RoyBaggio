@@ -7,7 +7,7 @@ function calculateBMI() {
 
     // Validasi Input (jadi Kalau Ga ada yang ga di isi Bakal ada alert)
     if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0 || age <= 0) {
-        alert('tolong isi Berat badan, Usia, Tinggi badan Anda');
+        alert('tolong isi : Berat badan, Usia, Tinggi badan Anda');
         return;
     
     }
